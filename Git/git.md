@@ -102,15 +102,51 @@ Flags: `--mixed` - move them to working directory. `--soft` - move to staging in
 
 
 `git pull` - Retrieve update from the remote repo
+* `git pull <remote> <master>` - remember that remote is almost always origin:
+* `git pull origin master`
+
+`git fetch` - Retrieve update from the remote repo. But doesnt automatically merge
+* `git fetch origin master` 
+
+`git shortlog` - See all commits to a project ordered by author
+
+`git log --author="Surma"` - Filter commits by this author
 
 ## Best practice <a name="practice"></a>
 
 1. The goal is that each commit has a single focus. Each commit should record a single-unit change. Each commit should change one aspect of the project.
 2. Keep the message short
 3. explain WHAT the commit does (not how or why)
+  3a. You can and SHOULD explain WHY below first commit message!!! (So that you can keep track later on)
 4. do not use the word "and" -> break the commit up in parts
 5. Your message should finish this phrase "This commit will..." but not include it!
 6. Be consistent with how you write commit messages
 7. Always use annotated tags when creating tags
 8. When you are collaborating with other developers make sure to create a new branch that has descriptive name that describes what changes it contains (Always use topic branches to isolate unrelated changes from eachother)
-9.
+9. write clear, descriptive, commit messages
+10. Name branches clearly that describe what changes the branch contains
+
+## Pull requests
+Before making a pull request, make sure you have:
+
+* reviewing the project's CONTRIBUTING.md file
+* checking out the project's existing issues
+* talking with the project maintainer
+
+To create a pull request, a couple of things need to happen:
+
+1. you must fork the source repository
+2. clone your fork down to your machine
+3. make some commits (ideally on a topic branch!)
+4. push the commits back to your fork
+5. create a new pull request and choose the branch that has your new commits
+
+## pull request if remote repo has made more commits while you were making commits
+
+get the cloneable URL of the source repository
+create a new remote with the git remote add command
+use the shortname upstream to point to the source repository
+provide the URL of the source repository
+fetch the new upstream remote
+merge the upstream's branch into a local branch
+push the newly updated local branch to your origin repo
