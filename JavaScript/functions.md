@@ -80,3 +80,6 @@ alertThenReturn()();
 ### Be passed as arguments into another function (callback function)
 
  A function that is passed as an argument into another function is called a callback function.
+
+
+ 
