@@ -76,6 +76,17 @@ switch statement:
 3. Strings (text)
 4. null (value of nothing, totally empty)
 5. undefined (absence of value, does not have a value)
+6. Symbols
+
+## Symbols
+
+Syntax
+```
+const sym1 = Symbol('apple');
+console.log(sym1);
+```
+
+Use case
 
 
 

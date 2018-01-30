@@ -81,5 +81,40 @@ alertThenReturn()();
 
  A function that is passed as an argument into another function is called a callback function.
 
+## What functions has access to
 
- 
+1. Functions arguments
+2. Local variables declared inside the function itself
+3. The same variables its parent uses (and parent of parent)
+4. Global variables
+
+## Immediately-Invoked Function Expressions
+
+without closure:
+```
+(function sayHi(name) {
+  alert(`Hi there, ${name}!`);
+  }
+)('Andy');
+
+// alerts 'Hi there, Andy!'
+```
+with closure:
+```
+button.addEventListener('click', (function() {
+  let count = 0;
+
+  return function() {
+    count += 1;
+
+    if (count === 2) {
+      alert('This alert appears every other press!');
+      count = 0;
+    }
+  };
+})());
+```
+
+When to use IIFE?
+
+If you simply have a one-time task (e.g., initializing an application), an IIFE is a great way to get something done without polluting your global environment with extra variables.
