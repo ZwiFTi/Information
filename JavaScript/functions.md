@@ -81,6 +81,9 @@ alertThenReturn()();
 
  A function that is passed as an argument into another function is called a callback function.
 
+ 1. pass a function to another function, then
+ 2. call the callback function when some condition are met
+
 ## What functions has access to
 
 1. Functions arguments

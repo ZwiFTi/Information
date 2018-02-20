@@ -212,3 +212,9 @@ Well, JavaScript code in the <head> will run before JavaScript code in the <body
 3 phases: capturing, at target and bubbling
 
 prevent default action: .preventDefault()
+
+
+
+# LINKS
+
+- [Listen for click over multiple (iterable) elements - We need to use closure!](https://zerobin.net/?01bf091c3495bc3c#LnVFBsPm56opImSiIf5t/vnTfR36bl1bMzbgOGHNCIk=)
